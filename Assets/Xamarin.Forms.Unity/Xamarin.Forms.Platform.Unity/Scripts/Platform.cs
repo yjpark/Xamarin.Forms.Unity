@@ -34,7 +34,7 @@ namespace Xamarin.Forms.Platform.Unity
 
 			var rectTransform = _canvas.GetComponent<RectTransform>();
 
-			rectTransform.ObserveEveryValueChanged(x => new UniRx.Tuple<float, float>(x.rect.width, x.rect.height))
+			rectTransform.ObserveEveryValueChanged(x => new Tuple<float, float>(x.rect.width, x.rect.height))
 				.Subscribe(_ =>
 				{
 					_currentPage?.Layout(ContainerBounds);

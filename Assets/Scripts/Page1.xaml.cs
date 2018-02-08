@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Xamarin.Forms;
 
+using Grid = Xamarin.Forms.Grid;
+
 public partial class Page1 : ContentPage
 {
 	public Page1()
