@@ -41,7 +41,7 @@ namespace XamlPad
 
 		class InternalReadOnlyReactiveProperty<T> : ReadOnlyReactiveProperty<T>, INotifyPropertyChanged
 		{
-			public InternalReadOnlyReactiveProperty(UniRx.IObservable<T> source, MonoBehaviour disposer) : base(source)
+			public InternalReadOnlyReactiveProperty(IObservable<T> source, MonoBehaviour disposer) : base(source)
 			{
 				this.Subscribe(_ => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(null))).AddTo(disposer);
 			}
